@@ -42,7 +42,7 @@ Do it yourself
 
 OPTION 2: Bash Script (USE THIS)
 
--- After cloning, cd to the folder created by git. simply run `sh build_sshfs` `-o` can be used to pass an directory to copy the binary too. `-r 1` can be used to force an rebuild. By default, it will just copy the sshfs binary to the same directory your in.
+-- After cloning, cd to the folder created by git. simply run `sh build_sshfs.sh` `-o` can be used to pass an directory to copy the binary too. `-r 1` can be used to force an rebuild. By default, it will just copy the sshfs binary to the same directory your in.
 
 This will just dump an sshfs binary on your system - move this to an folder in your path, or just call it directly with things like bash alias.
 
