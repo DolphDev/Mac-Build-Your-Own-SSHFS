@@ -1,11 +1,11 @@
 # Mac-Build-Your-Own-SSHFS
-This repo will contain code that will allow mac users to build their own copy of sshfs (Without relying on good samitarians to package it further). This gets around the issue where sshfs currently hasn't been updated for years on macfuse official site, and an community build exits at https://github.com/tormodwill/macSSHFS is reliant on a good samitaritan and currently is intel only. This does allow you to build the one for your system. This is because we currently don't have an easy and clear way to do this, and wanted to do this.
+This repo will contain code that will allow mac users to build their own copy of sshfs (Without relying on good samitarians to package it further). This gets around the issue where sshfs currently hasn't been updated for years on macfuse official site, and an community build that exists at https://github.com/tormodwill/macSSHFS is reliant on a good samitaritan and currently is intel only. This does allow you to build the one for your system and should be more evergreen. Made this since we currently don't have an easy and clear way to build sshfs, and wanted to do this to allow arm builds.
 
 
 ## Caveats
-Due to macfuse not supporting libfuse 3.0, we are limited to sshfs 2.10 - however this version is still much better than the one on the macfuse site. Should it ever support it. 
+Due to macfuse not supporting libfuse 3.0, we are limited to sshfs 2.10 - however this version is still much better than the one on the macfuse site which is from 2014 and lacks many new additions to sshfs. Should it ever support it, can try to update this to use most recent sshfs - but we'll have to see. 
 
-If macfuse also moves away from kernel extenstion to userland, as what is now possible, this will likely need updated as well.
+If macfuse also moves away from kernel extenstion to userland, as what is now possible in recent MAC OS versions, this will likely need updated as well.
 
 
 # Licence Note
@@ -18,7 +18,7 @@ All code I've written for this is MIT. That is simply the bash script that is to
 
 # Requirements
 
-0. Install Brew if you don't have it
+0. [Install Brew if you don't have it](https://brew.sh/)
 
 1. Install [MacFuse ](https://osxfuse.github.io/) - This will require you allow kernel extensions and such. 
 
@@ -37,7 +37,7 @@ Do it yourself
    * `mkdir _build;cd _build`
    * `meson ..` (if rerunning, `meson .. --reconfigure`)
    * `ninja` will compile it, and run the tests. If all should be good, there should be an `sshfs` binary in the _build directory.
-   * While this isn't distributable (as in, you can use it on other macs), this can be used on your system without issue. You can move/copy it to an file on path to use it as such. Simply using basic alias can be a good option too.
+   * While this isn't distributable (as in, you cant use it on other macs), this can be used on your system without issue. You can move/copy it to an file on your $PATH to use it as such. Simply using basic alias can be a good option too. 
    * Rebuilding - you may need to delete the sshfs binary, and run meson with reconfigure option. Than run `ninja`. If this doesn't work, just remove the _build folder and retry from the start.
 
 OPTION 2: Bash Script (TODO)
