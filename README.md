@@ -24,7 +24,7 @@ All code I've written for this is MIT. That is simply the bash script that is to
 
 2. Install XCode (Maybe if Command Line tools for xcode are not present, brew should install them)
 
-3. `brew install meson ninja glib pkgconf coreutils` - These packages are required for either the build itself, or ninja
+3. `brew install meson ninja glib pkgconfig coreutils` - These packages are required for either the build itself, or ninja
 
 4. Clone this repo
 
