@@ -36,7 +36,7 @@ Do it yourself
 2. Run the following commands
    * `mkdir _build;cd _build`
    * `meson ..` (if rerunning, `meson .. --reconfigure`)
-   * `ninja` will compile it, and run the tests. If all should be good, there should be an `sshfs` binary in the _build directory.
+   * Run `ninja` to compile it, and run the tests. If all should be good, there should be an `sshfs` binary in the _build directory.
    * While this isn't distributable (as in, you cant use it on other macs), this can be used on your system without issue. You can move/copy it to an file on your $PATH to use it as such. Simply using basic alias can be a good option too. 
    * Rebuilding - you may need to delete the sshfs binary, and run meson with reconfigure option. Than run `ninja`. If this doesn't work, just remove the _build folder and retry from the start.
 
@@ -50,10 +50,10 @@ Will make an simple bash script to get this automated.
 
 This will just dump an sshfs binary on your system - move this to an folder in your path, or just call it directly with things like bash alias'.
 
-### Notes you likely will need to rebuild between major updates between mac os, and likely all macfuse updates. If you get some sort of error complaining about macfuse linking, this is likely it. Simply rebuilding should fix it
+### Notes you likely will need to rebuild between major updates between mac os, and likely all macfuse updates. If you get some sort of error complaining about macfuse linking, this is likely it. Simply rebuilding should fix it. 
 
 # Other helpful tips
 
-by default this will pollute network sshfs drives with .DS_Store and for most file systems will also get mac's ._filename files which can pollute servers. You can get rid of this by using the -O argument and passing `noapplexattr,noappledouble` ie `sshfs -O noapplexattr,noappledouble`. All of the other standard one sshfs arguments will still apply. 
+by default sshfs will pollute network drives with .DS_Store and for most file systems will also get mac's ._filename files which can pollute servers and be annoying. You can get rid of this by using the -O argument and passing `noapplexattr,noappledouble` ie `sshfs -O noapplexattr,noappledouble`. All of the other standard one sshfs arguments will still apply. 
 
 
