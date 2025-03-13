@@ -1,3 +1,7 @@
+# Archived
+
+The author of mac fuse has now released sshfs next version with arm support, so I am archiving this repo
+
 # Mac-Build-Your-Own-SSHFS
 This repo will contain code that will allow mac users to build their own copy of sshfs (Without relying on good samitarians to package it further). This gets around the issue where sshfs currently hasn't been updated for years on macfuse official site, and an community build that exists at https://github.com/tormodwill/macSSHFS is reliant on a good samitaritan and currently is intel only. This does allow you to build the one for your system and should be more evergreen. Made this since we currently don't have an easy and clear way to build sshfs on mac, and wanted to do this to allow apple silicon arm builds.
 
